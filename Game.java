@@ -47,7 +47,7 @@ public class Game implements ActionListener{
     startScreen.setSize(500,100);
     startGame = new JButton("Start");
     startGame.setPreferredSize(new Dimension(300,25));
-    welcomeGame = new JLabel("<html><font color = 'red'><b>Welcome to the UC History Quiz!</b></font><br></br></html>");
+    welcomeGame = new JLabel("<html><font color = 'red' size='6'><i><b>Welcome to the UC History Quiz!</b></i></font><br></br></html>");
     startScreen.add(welcomeGame);
     startScreen.add(startGame);
     startGame.addActionListener(this);
