@@ -57,7 +57,7 @@ public class Game implements ActionListener{
     welcome = new JFrame("Good Luck!");
   
     JPanel qPanel = new JPanel();
-    qPanel.setLayout( new GridLayout(5,3,50,25));
+    qPanel.setLayout( new GridLayout(5,3,75,25));
     welcome.setLayout(new FlowLayout());
     welcome.setSize(575,300);
     
@@ -105,6 +105,8 @@ public class Game implements ActionListener{
     qPanel.add(nextQ);
     welcome.getContentPane().add(qPanel);
 
+    startScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    welcome.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     welcome.setVisible(false);
     
 
@@ -275,7 +277,7 @@ public class Game implements ActionListener{
       qNum = 0;
       score = 0;
       nextQ.setText("Next");
-      optText.setText(questionSet.get(qNum).QuestionText());
+      optText.setText("<html><font color = 'red' size='4'><b>" + questionSet.get(qNum).QuestionText()  + "</b></font></html>");
       optText1.setText(questionSet.get(qNum).option1());
       optText2.setText(questionSet.get(qNum).option2());
       optText3.setText(questionSet.get(qNum).option3());
